@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>藩・群地図(1871年12月末)</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="ctyo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="Map,Travel,Cycle" />
+    <meta property="og:url" content="https://ctyo.github.io/RoutesLab/" />
+    <meta property="og:site_name" content="RoutesLab ルーツラボ" />
+    <meta property="og:description" content="ルートラボの複数形です。複数のルートラボのコースを重ねて見られます" />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        #map {
+            width: calc(100% - 300px);
+            height: 100%;
+            flex-direction: row;
+        }
+
+        #control {
+            width: 300px;
+            height:100%;
+            flex-direction: row;
+        }
+        #control > img {
+            width: 300px;
+            border-bottom: solid black 1px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="control">
+        <img id="overlayimg" src="" /><br/>
+        <label>sw_lat : </label><input id="sw_lat" type="number" step="0.01" value=""><br/>
+        <label>sw_lon : </label><input id="sw_lon" type="number" step="0.01" value=""><br/>
+        <label>ne_lat : </label><input id="ne_lat" type="number" step="0.01" value=""><br/>
+        <label>ne_lon : </label><input id="ne_lon" type="number" step="0.01" value=""><br/>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyCtjwW1zjRUzEO6YdwVwNfGRaDC9d8mDFk&sensor=false" type="text/javascript" charset="UTF-8"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="./routeslab.js"></script>
+</body>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-11027566-8', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+</html>
